@@ -1,73 +1,60 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Portal</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section id="dashboard" class="dashboard hidden">
 
-  <header>
-    <h2>🎓 Student Portal</h2>
-    <p>Your academic information in one place</p>
-  </header>
-
-  <main class="container">
-
-    <section id="authSection" class="card">
-      <h2 id="formTitle">Student Login</h2>
-      <p id="message"></p>
-
-      <form id="registerForm" class="hidden">
-        <input id="name" type="text"
-          placeholder="Full Name" required>
-        <input id="regEmail" type="email"
-          placeholder="Email Address" required>
-        <input id="regPassword" type="password"
-          placeholder="Create Password (8 characters minimum)"
-          minlength="8" required>
-        <button type="submit">Create Account</button>
-      </form>
-
-      <form id="loginForm">
-        <input id="loginEmail" type="email"
-          placeholder="Email Address" required>
-        <input id="loginPassword" type="password"
-          placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-
-      <p id="switchText">
-        Don't have an account?
-        <a href="#" id="switchLink">Register here</a>
-      </p>
-    </section>
-
-    <section id="dashboard" class="card hidden">
+  <div class="dashboard-heading">
+    <div>
       <h2>Student Dashboard</h2>
-      <h3>Welcome, <span id="studentName"></span>!</h3>
+      <p>Welcome, <span id="studentName"></span>!</p>
+    </div>
+    <button id="logoutButton" class="logout">
+      Logout
+    </button>
+  </div>
 
-      <div class="info">
-        <p><strong>Student Name:</strong>
-          <span id="displayName"></span></p>
-        <p><strong>Email Address:</strong>
-          <span id="displayEmail"></span></p>
-        <p><strong>Account:</strong> Active</p>
-      </div>
+  <div class="student-profile">
+    <h3>My Student Account</h3>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Status:</strong> Active</p>
+  </div>
 
-      <button id="logoutButton" class="logout">
-        Logout
-      </button>
-    </section>
+  <h3 class="section-heading">Student Services</h3>
 
-  </main>
+  <div class="services-grid">
 
-  <footer>
-    <p>© 2026 Student Portal. All rights reserved.</p>
-  </footer>
+    <button class="service-card" data-page="academics">
+      <span class="service-icon">📚</span>
+      <strong>Academics</strong>
+      <small>Courses and examination results</small>
+    </button>
 
-  <script src="app.js"></script>
-</body>
-</html>
+    <button class="service-card" data-page="fees">
+      <span class="service-icon">💳</span>
+      <strong>Fees</strong>
+      <small>Fee statements and payments</small>
+    </button>
+
+    <button class="service-card" data-page="accommodation">
+      <span class="service-icon">🏠</span>
+      <strong>Accommodation</strong>
+      <small>Hostel and room information</small>
+    </button>
+
+    <button class="service-card" data-page="graduation">
+      <span class="service-icon">🎓</span>
+      <strong>Graduation Tracker</strong>
+      <small>Track your graduation progress</small>
+    </button>
+
+  </div>
+
+  <div id="serviceDetails" class="service-details hidden">
+    <button id="backButton" class="back-button">
+      ← Back to Dashboard
+    </button>
+
+    <h2 id="serviceTitle"></h2>
+    <div id="serviceContent"></div>
+  </div>
+
+</section>
