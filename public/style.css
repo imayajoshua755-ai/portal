@@ -1,0 +1,113 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #253247;
+  min-height: 100vh;
+}
+
+header {
+  background: #12345a;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h2 {
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 90%;
+  max-width: 450px;
+  margin: 50px auto;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #12345a;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid #ccd5df;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  background: #1764a5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #104b80;
+}
+
+#switchText {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: #1764a5;
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #d12c2c;
+}
+
+#dashboard h3 {
+  margin: 15px 0;
+}
+
+.info {
+  background: #edf4fa;
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+
+.logout {
+  background: #c0392b;
+}
+
+.logout:hover {
+  background: #922b21;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #68778a;
+}
